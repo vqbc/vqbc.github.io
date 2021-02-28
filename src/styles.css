@@ -1,0 +1,187 @@
+:root {
+  --primary-hue: 222deg;
+  --intermediate-hue: 212deg;
+  --accent-hue: 194deg;
+  --card-half-margin: calc(0.3rem + 0.2vw);
+  --card-background: radial-gradient(#fff, #fafafa);
+  --card-radius-long: calc(60px + 0.9vw) calc(60px + 0.9vw);
+  --card-radius-short: 10% 10%;
+  --card-shadow: 0 1px 6px rgb(0, 0, 0, 0.07);
+  --card-hover-shadow: 0 3px 8px rgb(0, 0, 0, 0.14);
+  --header-text-shadow: 3px 0 hsl(var(--accent-hue), 33%, 66%);
+  --transition-duration: 0.25s;
+}
+
+body {
+  display: grid;
+  grid:
+    "header    bio" min-content
+    "cards   cards" min-content
+    "spacer spacer" 1fr
+    "footer footer" min-content
+    / min-content 1fr;
+  min-height: 100vh;
+  margin: 0;
+  color: hsl(var(--primary-hue), 22%, 22%);
+  font-family: "Commissioner", sans-serif;
+  line-height: 1.4;
+}
+
+header {
+  display: flex;
+  grid-area: header;
+  align-items: center;
+  justify-content: center;
+  margin: var(--card-half-margin);
+  padding: 0.5rem 2.5rem;
+  color: hsl(var(--primary-hue), 22%, 11%);
+  font: italic 600 calc(120px + 1.8vw) / 0.8 "Commissioner", sans-serif;
+  text-shadow: -3px var(--header-text-shadow);
+  background: var(--card-background);
+  border-radius: 0 0 var(--card-radius-long) / 0 0 var(--card-radius-short);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-duration) box-shadow;
+  user-select: none;
+  font-variation-settings: "FLAR" 100;
+}
+
+forme {
+  visibility: hidden;
+}
+
+header h1 {
+  position: absolute;
+  margin: -0.3em 0 0 0;
+  font-weight: inherit;
+  font-size: inherit;
+  transition: var(--transition-duration) font-weight,
+    var(--transition-duration) text-shadow;
+}
+
+header:hover h1 {
+  font-weight: 100;
+  text-shadow: -1px var(--header-text-shadow);
+}
+
+header:active h1 {
+  font-weight: 900;
+  text-shadow: -5px var(--header-text-shadow);
+}
+
+cards {
+  display: grid;
+  grid: min-content / repeat(4, 1fr);
+  grid-area: cards;
+}
+
+bio,
+section,
+footer {
+  margin: var(--card-half-margin);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-duration) box-shadow;
+}
+
+bio,
+section {
+  padding: 1em 2em;
+  font-size: calc(1.2rem + 0.3vw);
+}
+
+bio h2,
+section h2 {
+  font-variation-settings: "FLAR" 60;
+  margin-bottom: 0.4em;
+}
+
+bio p,
+section p {
+  margin-top: 0;
+}
+
+bio {
+  grid-area: bio;
+  border-radius: 0 0 var(--card-radius-long) / 0 0 var(--card-radius-short);
+}
+
+bio p {
+  max-width: 50ch;
+}
+
+section {
+  border-radius: var(--card-radius-long) / var(--card-radius-short);
+}
+
+section:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+footer {
+  grid-area: footer;
+  padding: 1em 0.6em;
+  font: 450 calc(1.4rem + 0.4vw) "Commissioner", sans-serif;
+  border-radius: var(--card-radius-long) 0 0 / var(--card-radius-short) 0 0;
+  font-variation-settings: "FLAR" 100;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline hsl(var(--accent-hue), 66%, 66%) 2px;
+  text-underline-offset: 3px;
+  transition: var(--transition-duration) text-decoration-color;
+}
+
+a:hover {
+  text-decoration-color: hsl(var(--accent-hue), 66%, 77%);
+}
+
+footer a {
+  text-decoration: none;
+}
+
+::selection {
+  background: hsl(var(--accent-hue), 88%, 66%, 33%);
+}
+
+@media (max-width: 1600px) {
+  cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1150px) {
+  cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    grid:
+      "header" min-content
+      "bio   " min-content
+      "cards " min-content
+      "spacer" 1fr
+      "footer" min-content
+      / 1fr;
+  }
+
+  header {
+    border-radius: 0;
+  }
+
+  bio {
+    margin-bottom: calc(2 * var(--card-half-margin));
+  }
+
+  footer {
+    margin-top: calc(2 * var(--card-half-margin));
+  }
+}

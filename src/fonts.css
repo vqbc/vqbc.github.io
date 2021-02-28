@@ -1,0 +1,7 @@
+@font-face {
+  font-weight: 100 900;
+  font-family: "Commissioner";
+  font-style: oblique 0deg 12deg;
+  font-variation-settings: "FLAR" 0 100, "VOLM" 0 100;
+  src: url("../fonts/Commissioner.woff2") format("woff2-variations");
+}

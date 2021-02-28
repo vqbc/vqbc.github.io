@@ -1,0 +1,14 @@
+{
+  "name": "Andrew Chang",
+  "description": "Hi! I’m Andrew, and I do various things related to math, physics, coding, maybe some random stuff now and then.",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "hsl(194deg, 66%, 66%)",
+  "background_color": "#f3f3f3",
+  "display": "standalone"
+}
