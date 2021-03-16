@@ -21,7 +21,7 @@ body {
     "footer footer" min-content
     / min-content 1fr;
   min-height: 100vh;
-  margin: 0;
+  margin: 0 max(0px, calc(10vw - 100px));
   color: hsl(var(--primary-hue), 22%, 22%);
   font-family: "Commissioner", sans-serif;
   line-height: 1.4;
@@ -144,25 +144,25 @@ footer a {
   background: hsl(var(--accent-hue), 88%, 66%, 33%);
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 2000px) {
   cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1320px) {
   cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   body {
     grid:
       "header" min-content
