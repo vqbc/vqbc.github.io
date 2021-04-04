@@ -13,13 +13,7 @@
 }
 
 body {
-  display: grid;
-  grid:
-    "header    bio" min-content
-    "cards   cards" min-content
-    "spacer spacer" 1fr
-    "footer footer" min-content
-    / min-content 1fr;
+  box-sizing: border-box;
   min-height: 100vh;
   margin: 0 max(0px, calc(10vw - 100px));
   color: hsl(var(--primary-hue), 22%, 22%);

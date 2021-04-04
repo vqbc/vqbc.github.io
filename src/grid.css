@@ -1,0 +1,9 @@
+body {
+  display: grid;
+  grid:
+    "header    bio" min-content
+    "cards   cards" min-content
+    "spacer spacer" 1fr
+    "footer footer" min-content
+    / min-content 1fr;
+}
