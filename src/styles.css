@@ -71,7 +71,7 @@ section {
 
 bio h2,
 section h2 {
-  font-variation-settings: "FLAR" 60;
+  font-variation-settings: "FLAR" 50;
   margin-bottom: 0.4em;
 }
 
@@ -163,5 +163,11 @@ footer a {
 
   footer {
     margin-top: calc(2 * var(--card-half-margin));
+  }
+}
+
+@media (min-width: 500px) {
+  .mobile-break {
+    display: none;
   }
 }
