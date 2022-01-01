@@ -143,16 +143,6 @@ footer a {
 }
 
 @media (max-width: 650px) {
-  body {
-    grid:
-      "header" min-content
-      "bio   " min-content
-      "cards " min-content
-      "spacer" 1fr
-      "footer" min-content
-      / 1fr;
-  }
-
   header {
     border-radius: 0;
   }
