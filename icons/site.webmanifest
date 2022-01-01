@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "hsl(194deg, 66%, 66%)",
+  "theme_color": "hsl(194deg 66% 66%)",
   "background_color": "#f3f3f3",
   "display": "standalone"
 }

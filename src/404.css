@@ -4,7 +4,7 @@ body {
     "ascii spacer notice" 1fr
     / min-content 1fr min-content;
   min-height: calc(100vh - 16px);
-  color: hsl(var(--primary-hue), 22%, 11%);
+  color: hsl(var(--primary-hue) 22% 11%);
   font: 900 min(41.2vh, 14vw) "Commissioner", sans-serif;
   background: linear-gradient(to top right, #eee, #fafafa);
   font-variation-settings: "FLAR" 100;
@@ -24,18 +24,18 @@ notice {
 }
 
 a {
-  color: hsl(var(--primary-hue), 22%, 33%);
+  color: hsl(var(--primary-hue) 22% 33%);
   font-style: italic;
-  text-decoration: underline hsl(var(--accent-hue), 66%, 66%);
+  text-decoration: underline hsl(var(--accent-hue) 66% 66%);
   transition: var(--transition-duration) text-decoration-color;
 }
 
 a:hover {
-  text-decoration-color: hsl(var(--accent-hue), 72%, 77%);
+  text-decoration-color: hsl(var(--accent-hue) 72% 77%);
 }
 
 ::selection {
-  background: hsl(var(--accent-hue), 88%, 66%, 33%);
+  background: hsl(var(--accent-hue) 88% 66% / 33%);
 }
 
 @media (max-width: 1200px) {

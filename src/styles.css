@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0 max(0px, calc(10vw - 100px));
-  color: hsl(var(--primary-hue), 22%, 22%);
+  color: hsl(var(--primary-hue) 22% 22%);
   font-family: "Commissioner", sans-serif;
   line-height: 1.4;
 }
@@ -14,7 +14,7 @@ header {
   justify-content: center;
   margin: var(--card-half-margin);
   padding: 0.5rem 2.5rem;
-  color: hsl(var(--primary-hue), 22%, 11%);
+  color: hsl(var(--primary-hue) 22% 11%);
   font: italic 600 calc(120px + 1.8vw) / 0.8 "Commissioner", sans-serif;
   text-shadow: -3px var(--header-text-shadow);
   background: var(--card-background);
@@ -107,13 +107,13 @@ footer {
 
 a {
   color: inherit;
-  text-decoration: underline hsl(var(--accent-hue), 66%, 66%) 2px;
+  text-decoration: underline hsl(var(--accent-hue) 66% 66%) 2px;
   text-underline-offset: 3px;
   transition: var(--transition-duration) text-decoration-color;
 }
 
 a:hover {
-  text-decoration-color: hsl(var(--accent-hue), 66%, 77%);
+  text-decoration-color: hsl(var(--accent-hue) 66% 77%);
 }
 
 footer a {
@@ -121,7 +121,7 @@ footer a {
 }
 
 ::selection {
-  background: hsl(var(--accent-hue), 88%, 66%, 33%);
+  background: hsl(var(--accent-hue) 88% 66% / 33%);
 }
 
 @media (max-width: 2000px) {
