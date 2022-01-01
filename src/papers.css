@@ -1,4 +1,5 @@
 body {
+  margin: 0 max(2rem, calc(10vw - 100px));
   padding-top: 1rem;
   font-size: 1.5rem;
 }
