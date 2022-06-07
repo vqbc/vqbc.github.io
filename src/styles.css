@@ -86,7 +86,7 @@ bio {
 }
 
 bio p {
-  max-width: 50ch;
+  max-width: 45ch;
 }
 
 section {
@@ -116,7 +116,8 @@ a:hover {
   text-decoration-color: hsl(var(--accent-hue) 66% 77%);
 }
 
-footer a {
+footer a,
+.hidden-link {
   text-decoration: none;
 }
 
