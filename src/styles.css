@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   min-height: 100vh;
-  margin: 0 max(0px, calc(10vw - 100px));
+  margin: 0 max(0px, calc(32vw - 400px));
   color: hsl(var(--primary-hue) 22% 22%);
   font-family: "Commissioner", sans-serif;
   line-height: 1.4;
@@ -125,19 +125,19 @@ footer a,
   background: hsl(var(--accent-hue) 88% 66% / 33%);
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 3000px) {
   cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1250px) {
   cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   cards {
     grid-template-columns: repeat(1, 1fr);
   }
