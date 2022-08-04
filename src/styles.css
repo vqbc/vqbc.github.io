@@ -66,13 +66,25 @@ footer {
 bio,
 section {
   padding: 1em 2em;
-  font-size: calc(1.2rem + 0.3vw);
+  font-size: calc(1.2rem + 0.25vw);
 }
 
 bio h2,
 section h2 {
-  font-variation-settings: "FLAR" 50;
   margin-bottom: 0.4em;
+  font-weight: 630;
+  font-size: 1.4em;
+  font-variation-settings: "FLAR" 50;
+}
+
+section subhead {
+  display: block;
+  margin: -1em 0 0.5em 0.2em;
+  color: hsl(var(--accent-hue) 18% 48%);
+  font: 500 0.5em "Commissioner", sans-serif;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  font-variation-settings: "FLAR" 100;
 }
 
 bio p,
@@ -101,8 +113,36 @@ footer {
   grid-area: footer;
   padding: 1em 0.6em;
   font: 450 calc(1.4rem + 0.4vw) "Commissioner", sans-serif;
+  text-align: center;
   border-radius: var(--card-radius-long) 0 0 / var(--card-radius-short) 0 0;
   font-variation-settings: "FLAR" 100;
+}
+
+links {
+  display: block;
+  margin-top: 1em;
+  font: 525 0.7em "Commissioner", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+links h2 {
+  margin: 1em 0 0.5em;
+  font: 450 0.8em "Commissioner", sans-serif;
+}
+
+word-left,
+word-right {
+  display: inline-block;
+  width: 5em;
+}
+
+word-left {
+  text-align: right;
+}
+
+word-right {
+  text-align: left;
 }
 
 a {
@@ -116,7 +156,6 @@ a:hover {
   text-decoration-color: hsl(var(--accent-hue) 66% 77%);
 }
 
-footer a,
 .hidden-link {
   text-decoration: none;
 }
