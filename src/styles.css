@@ -10,8 +10,8 @@ body {
 header {
   display: flex;
   grid-area: header;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: var(--card-half-margin);
   padding: 0.5rem 2.5rem;
   color: hsl(var(--primary-hue) 22% 11%);
@@ -147,7 +147,8 @@ word-right {
 
 a {
   color: inherit;
-  text-decoration: underline hsl(var(--accent-hue) 66% 66%) 2px;
+  text-decoration: underline hsl(var(--accent-hue) 66% 66%);
+  text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   transition: var(--transition-duration) text-decoration-color;
 }
