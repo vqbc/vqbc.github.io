@@ -16,7 +16,6 @@ jobs:
           node-version: "18"
       - run: npm ci
       - run: node webtori $GITHUB_REPOSITORY_OWNER.github.io
-      - run: |
-          git add -A
-          git diff-index --quiet HEAD || git commit -m "Update webring"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update webring
