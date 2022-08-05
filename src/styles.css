@@ -147,7 +147,8 @@ word-right {
 
 a {
   color: inherit;
-  text-decoration: underline hsl(var(--accent-hue) 66% 66%);
+  text-decoration-line: underline;
+  text-decoration-color: hsl(var(--accent-hue) 66% 66%);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   transition: var(--transition-duration) text-decoration-color;
@@ -158,7 +159,7 @@ a:hover {
 }
 
 .hidden-link {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 ::selection {

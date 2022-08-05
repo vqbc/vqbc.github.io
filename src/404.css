@@ -26,7 +26,8 @@ notice {
 a {
   color: hsl(var(--primary-hue) 22% 33%);
   font-style: italic;
-  text-decoration: underline hsl(var(--accent-hue) 66% 66%);
+  text-decoration-line: underline;
+  text-decoration-color: hsl(var(--accent-hue) 66% 66%);
   transition: var(--transition-duration) text-decoration-color;
 }
 
