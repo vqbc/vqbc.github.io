@@ -1,4 +1,4 @@
-name: Update page lists
+name: Update webring
 
 on:
   push:
