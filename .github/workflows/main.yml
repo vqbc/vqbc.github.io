@@ -1,0 +1,22 @@
+name: Update page lists
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - run: npm ci
+      - run: node webtori $GITHUB_REPOSITORY_OWNER.github.io
+      - run: |
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Update webring"
+          git push
