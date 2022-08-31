@@ -17,8 +17,12 @@
         $("*[id*='wr-link-']")
           .map(async function () {
             let theirPage = await axios.get($(this).attr("href"));
-            const $n = cheerio.load(theirPage.data); /* get neighbor page DOM */
-            console.log($n.html());
+            let $n;
+            try {
+              $n = cheerio.load(theirPage.data); /* get neighbor page DOM */
+            } catch (e) {
+              $n = cheerio.load();
+            }
 
             return [
               $(this)
