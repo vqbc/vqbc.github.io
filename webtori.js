@@ -18,6 +18,7 @@
           .map(async function () {
             let theirPage = await axios.get($(this).attr("href"));
             const $n = cheerio.load(theirPage.data); /* get neighbor page DOM */
+            console.log($n.html());
 
             return [
               $(this)
