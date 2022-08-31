@@ -22,7 +22,7 @@
             try {
               $n = cheerio.load(theirPage.data); /* get neighbor page DOM */
             } catch (e) {
-              $n = cheerio.load(<html></html>);
+              $n = cheerio.load("<html></html>");
             }
 
             return [
