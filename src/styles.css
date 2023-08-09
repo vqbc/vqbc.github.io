@@ -71,15 +71,16 @@ section {
 
 bio h2,
 section h2 {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.5em;
   font-weight: 630;
   font-size: 1.4em;
   font-variation-settings: "FLAR" 50;
+  line-height: 1.2;
 }
 
 section subhead {
   display: block;
-  margin: -1em 0 0.5em 0.2em;
+  margin: -1em 0 0.65em 0.2em;
   color: hsl(var(--accent-hue) 18% 48%);
   font: 500 0.5em "Commissioner", sans-serif;
   letter-spacing: 0.5em;
