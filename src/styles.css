@@ -2,148 +2,66 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0 max(0px, calc(32vw - 400px));
-  color: hsl(var(--primary-hue) 22% 22%);
+  color: hsl(var(--primary-hue) 22% 80%);
   font-family: "Commissioner", sans-serif;
   line-height: 1.4;
+  font-variation-settings: "FLAR" 100;
 }
 
 header {
   display: flex;
-  grid-area: header;
   justify-content: center;
-  align-items: center;
-  margin: var(--card-half-margin);
-  padding: 0.5rem 2.5rem;
-  color: hsl(var(--primary-hue) 22% 11%);
   font: italic 600 calc(120px + 1.8vw) / 0.8 "Commissioner", sans-serif;
-  text-shadow: -3px var(--header-text-shadow);
-  background: var(--card-background);
-  border-radius: 0 0 var(--card-radius-long) / 0 0 var(--card-radius-short);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition-duration) box-shadow;
-  user-select: none;
+  text-align: center;
   font-variation-settings: "FLAR" 100;
 }
 
-space {
-  visibility: hidden;
-}
-
-header h1 {
-  position: absolute;
-  margin: -0.3em 0 0 0;
-  font-weight: inherit;
-  font-size: inherit;
+h1 {
+  margin: var(--head-margin);
+  padding: 0 2.5rem;
+  color: hsl(var(--primary-hue) 22% 88%);
+  font: inherit;
+  text-shadow: -3px var(--header-text-shadow);
   transition: var(--transition-duration) font-weight,
     var(--transition-duration) text-shadow;
+  user-select: none;
 }
 
-header:hover h1 {
+h1:hover {
   font-weight: 100;
   text-shadow: -1px var(--header-text-shadow);
 }
 
-header:active h1 {
+h1:active {
   font-weight: 900;
   text-shadow: -5px var(--header-text-shadow);
 }
 
-cards {
-  display: grid;
-  grid: min-content / repeat(4, 1fr);
-  grid-area: cards;
-}
-
-bio,
-section,
-footer {
-  margin: var(--card-half-margin);
-  background: var(--card-background);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition-duration) box-shadow;
-}
-
-bio,
-section {
+bio {
+  grid-area: bio;
   padding: 1em 2em;
   font-size: calc(1.2rem + 0.25vw);
+  border-radius: 0 0 var(--card-radius-long) / 0 0 var(--card-radius-short);
 }
 
-bio h2,
-section h2 {
+h2 {
   margin-bottom: 0.5em;
   font-weight: 630;
   font-size: 1.4em;
-  font-variation-settings: "FLAR" 50;
   line-height: 1.2;
 }
 
-section subhead {
-  display: block;
-  margin: -1em 0 0.65em 0.2em;
-  color: hsl(var(--accent-hue) 18% 48%);
-  font: 500 0.5em "Commissioner", sans-serif;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  font-variation-settings: "FLAR" 100;
+bio ul {
+  max-width: 45ch;
 }
 
-bio p,
-section p {
-  margin-top: 0;
-}
-
-bio {
-  grid-area: bio;
-  border-radius: 0 0 var(--card-radius-long) / 0 0 var(--card-radius-short);
+bio li {
+  margin: 0.3em 0;
 }
 
 bio p {
   max-width: 45ch;
-}
-
-section {
-  border-radius: var(--card-radius-long) / var(--card-radius-short);
-}
-
-section:hover {
-  box-shadow: var(--card-hover-shadow);
-}
-
-footer {
-  grid-area: footer;
-  padding: 1em 0.6em;
-  font: 450 calc(1.4rem + 0.4vw) "Commissioner", sans-serif;
-  text-align: center;
-  border-radius: var(--card-radius-long) 0 0 / var(--card-radius-short) 0 0;
-  font-variation-settings: "FLAR" 100;
-}
-
-links {
-  display: block;
-  margin-top: 1em;
-  font: 525 0.7em "Commissioner", sans-serif;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-links h2 {
-  margin: 1em 0 0.5em;
-  font: 450 0.8em "Commissioner", sans-serif;
-}
-
-word-left,
-word-right {
-  display: inline-block;
-  width: 5em;
-}
-
-word-left {
-  text-align: right;
-}
-
-word-right {
-  text-align: left;
+  margin-top: 0;
 }
 
 a {
@@ -167,40 +85,34 @@ a:hover {
   background: hsl(var(--accent-hue) 88% 66% / 33%);
 }
 
-@media (max-width: 3000px) {
-  cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
+ul {
+  list-style-type: "> ";
 }
 
-@media (max-width: 1250px) {
-  cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
+ul > li > ul {
+  list-style-type: "» ";
 }
 
-@media (max-width: 800px) {
-  cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.link-list {
+  list-style-type: link-list;
 }
 
-@media (max-width: 650px) {
+@counter-style link-list {
+  system: fixed;
+  symbols: α ζ λ ω β;
+  prefix: "";
+  suffix: " / ";
+}
+
+@media (min-width: 1046px) {
   header {
-    border-radius: 0;
-  }
-
-  bio {
-    margin-bottom: calc(2 * var(--card-half-margin));
-  }
-
-  footer {
-    margin-top: calc(2 * var(--card-half-margin));
+    overflow: hidden;
+    text-wrap: nowrap;
   }
 }
 
-@media (min-width: 500px) {
-  .mobile-break {
-    display: none;
+@media (max-width: 1045px) {
+  header {
+    text-wrap: wrap;
   }
 }

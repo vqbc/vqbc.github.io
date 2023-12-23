@@ -2,14 +2,7 @@
   --primary-hue: 222deg;
   --intermediate-hue: 212deg;
   --accent-hue: 194deg;
-  --card-half-margin: calc(0.3rem + 0.2vw);
-  --card-background: radial-gradient(#fff, #fafafa);
-  --card-radius-unit: calc(60px + 0.9vw);
-  --card-radius-long: var(--card-radius-unit) var(--card-radius-unit);
-  --card-radius-short: calc(var(--card-radius-unit) / 3)
-    calc(var(--card-radius-unit) / 3);
-  --card-shadow: 0 1px 6px rgb(0 0 0 / 0.07);
-  --card-hover-shadow: 0 3px 8px rgb(0 0 0 / 0.14);
-  --header-text-shadow: 3px 0 hsl(var(--accent-hue) 33% 66%);
+  --head-margin: calc(2.4rem + 1.6vw);
+  --header-text-shadow: 3px 0 hsl(var(--accent-hue) 33% 55%);
   --transition-duration: 0.25s;
 }

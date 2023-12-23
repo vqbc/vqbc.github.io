@@ -1,11 +1,5 @@
 body {
   margin: 0 max(2rem, calc(10vw - 100px));
   padding-top: 1rem;
-  font-size: 1.5rem;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 2.2rem;
-  line-height: 1.1;
+  font-size: calc(1.2rem + 0.25vw);
 }

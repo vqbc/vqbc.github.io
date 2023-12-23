@@ -1,21 +1,6 @@
 body {
   display: grid;
   grid:
-    "header    bio" min-content
-    "cards   cards" min-content
-    "spacer spacer" 1fr
-    "footer footer" min-content
-    / min-content 1fr;
-}
-
-@media (max-width: 650px) {
-  body {
-    grid:
-      "header" min-content
-      "bio   " min-content
-      "cards " min-content
-      "spacer" 1fr
-      "footer" min-content
-      / 1fr;
-  }
+    "header" min-content
+    "bio   " min-content;
 }
