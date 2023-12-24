@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   margin: 0 max(0px, calc(32vw - 400px));
   color: hsl(var(--primary-hue) 22% 80%);
-  font-family: "Commissioner", sans-serif;
+  font-family: "Commissioner", "cwTeX Q Hei", sans-serif;
   line-height: 1.4;
   font-variation-settings: "FLAR" 100;
 }
@@ -11,17 +11,18 @@ body {
 header {
   display: flex;
   justify-content: center;
-  font: italic 600 calc(120px + 1.8vw) / 0.8 "Commissioner", sans-serif;
+  overflow: hidden;
+  font: italic 600 calc(2 * var(--head-unit)) / 0.8 "Commissioner", sans-serif;
   text-align: center;
   font-variation-settings: "FLAR" 100;
 }
 
 h1 {
-  margin: var(--head-margin);
-  padding: 0 2.5rem;
+  margin: calc(0.8 * var(--head-unit));
+  padding: 0 calc(0.8 * var(--head-unit));
   color: hsl(var(--primary-hue) 22% 88%);
   font: inherit;
-  text-shadow: -3px var(--header-text-shadow);
+  text-shadow: calc(-0.06 * var(--head-unit)) var(--header-text-shadow);
   transition: var(--transition-duration) font-weight,
     var(--transition-duration) text-shadow;
   user-select: none;
@@ -29,12 +30,12 @@ h1 {
 
 h1:hover {
   font-weight: 100;
-  text-shadow: -1px var(--header-text-shadow);
+  text-shadow: calc(-0.02 * var(--head-unit)) var(--header-text-shadow);
 }
 
 h1:active {
   font-weight: 900;
-  text-shadow: -5px var(--header-text-shadow);
+  text-shadow: calc(-0.05 * var(--head-unit)) var(--header-text-shadow);
 }
 
 bio {
@@ -104,14 +105,13 @@ ul > li > ul {
   suffix: " / ";
 }
 
-@media (min-width: 1046px) {
+@media (min-width: 800px) {
   header {
-    overflow: hidden;
     text-wrap: nowrap;
   }
 }
 
-@media (max-width: 1045px) {
+@media (max-width: 799px) {
   header {
     text-wrap: wrap;
   }
