@@ -3,7 +3,7 @@
   --intermediate-hue: 212deg;
   --accent-hue: 194deg;
   --head-unit: calc(2.4rem + 1.6vw);
-  --header-text-shadow: calc(0.06 * var(--head-unit)) 0
+  --header-text-shadow: calc(0.05 * var(--head-unit)) 0
     hsl(var(--accent-hue) 33% 55%);
   --transition-duration: 0.25s;
 }

@@ -30,12 +30,16 @@ h1 {
 
 h1:hover {
   font-weight: 100;
-  text-shadow: calc(-0.02 * var(--head-unit)) var(--header-text-shadow);
+  text-shadow: calc(-0.015 * var(--head-unit)) var(--header-text-shadow);
 }
 
 h1:active {
   font-weight: 900;
-  text-shadow: calc(-0.05 * var(--head-unit)) var(--header-text-shadow);
+  text-shadow: calc(-0.075 * var(--head-unit)) var(--header-text-shadow);
+}
+
+.alt {
+  font-feature-settings: "aalt";
 }
 
 bio {
