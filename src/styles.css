@@ -69,6 +69,11 @@ bio p {
   margin-top: 0;
 }
 
+em {
+  font-weight: 530;
+  font-style: normal;
+}
+
 a {
   color: inherit;
   text-decoration-line: underline;
@@ -104,7 +109,7 @@ ul > li > ul {
 
 @counter-style link-list {
   system: fixed;
-  symbols: α ζ λ ω β;
+  symbols: α μ λ ω β;
   prefix: "";
   suffix: " / ";
 }
