@@ -1,6 +1,5 @@
 body {
   box-sizing: border-box;
-  min-height: 100vh;
   margin: 0 max(0px, calc(32vw - 400px));
   color: hsl(0 0% 20%);
   font-family: "Commissioner", "cwTeX Q Hei", sans-serif;
