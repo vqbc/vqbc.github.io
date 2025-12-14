@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0 max(0px, calc(32vw - 400px));
-  color: hsl(var(--primary-hue) 22% 80%);
+  /* color: hsl(var(--primary-hue) 22% 80%); */
   font-family: "Commissioner", "cwTeX Q Hei", sans-serif;
   line-height: 1.4;
   font-variation-settings: "FLAR" 100;
@@ -20,7 +20,7 @@ header {
 h1 {
   margin: calc(0.8 * var(--head-unit));
   padding: 0 calc(0.8 * var(--head-unit));
-  color: hsl(var(--primary-hue) 22% 88%);
+  /* color: hsl(var(--primary-hue) 22% 88%); */
   font: inherit;
   text-shadow: calc(-0.06 * var(--head-unit)) var(--header-text-shadow);
   transition: var(--transition-duration) font-weight,
