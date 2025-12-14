@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   margin: 0 max(0px, calc(32vw - 400px));
-  color: hsl(0 0% 10%);
+  color: hsl(0 0% 20%);
   font-family: "Commissioner", "cwTeX Q Hei", sans-serif;
   line-height: 1.4;
   font-variation-settings: "FLAR" 100;
@@ -20,7 +20,7 @@ header {
 h1 {
   margin: calc(0.8 * var(--head-unit));
   padding: 0 calc(0.8 * var(--head-unit));
-  color: hsl(0 0% 10%);
+  color: hsl(0 0% 20%);
   font: inherit;
   text-shadow: calc(-0.06 * var(--head-unit)) var(--header-text-shadow);
   transition: var(--transition-duration) font-weight,
@@ -77,14 +77,14 @@ em {
 a {
   color: inherit;
   text-decoration-line: underline;
-  text-decoration-color: hsl(var(--accent-hue) 66% 66%);
+  text-decoration-color: hsl(var(--accent-hue) 66% 45%);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   transition: var(--transition-duration) text-decoration-color;
 }
 
 a:hover {
-  text-decoration-color: hsl(var(--accent-hue) 66% 77%);
+  text-decoration-color: hsl(var(--accent-hue) 66% 60%);
 }
 
 .hidden-link {
