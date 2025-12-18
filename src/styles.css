@@ -44,7 +44,7 @@ h1:active {
 bio {
   grid-area: bio;
   padding: 1em 2em;
-  font-size: calc(1.2rem + 0.25vw);
+  font-size: calc(0.9rem + 0.25vw);
   border-radius: 0 0 var(--card-radius-long) / 0 0 var(--card-radius-short);
 }
 
